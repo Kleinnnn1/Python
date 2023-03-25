@@ -110,6 +110,7 @@ def read_data():
 
 
 # root Graphical User Interface
+global root
 root = tk.Tk()
 root.title("Act3")
 root.eval('tk::PlaceWindow . center')
@@ -130,7 +131,7 @@ last_name_label.grid(row=3, column=0, padx=5, pady=5)
 last_name_entry = tk.Entry(root)
 last_name_entry.grid(row=3, column=1, padx=5, pady=5)
 
-# Create the ID entry field
+# Create the email address entry field
 email_address_label = tk.Label(root, text="Email Address:")
 email_address_label.grid(row=4, column=0, padx=5, pady=5)
 email_address_entry = tk.Entry(root)
