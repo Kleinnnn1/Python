@@ -40,7 +40,7 @@ def insert_data():
     global first_name, last_name, email_address, sqliteConnection
     first_name = first_name_entry.get()
     last_name = last_name_entry.get()
-    email_address = last_name_entry.get()
+    email_address = email_address_entry.get()
 
     try:
         sqliteConnection = sqlite3.connect('dbactivity3.db')
@@ -110,7 +110,6 @@ def read_data():
 
 
 # root Graphical User Interface
-global root
 root = tk.Tk()
 root.title("Act3")
 root.eval('tk::PlaceWindow . center')
@@ -145,3 +144,6 @@ submit_button.grid(row=6, column=1, pady=5)
 show_button = tk.Button(root, text="Show Records", command=read_data, bg="blue", fg="white")
 show_button.grid(row=8, column=1)
 root.mainloop()
+
+#call function to create database
+#create_db()
